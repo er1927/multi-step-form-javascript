@@ -6,8 +6,14 @@ body {
     background-color: #EDF4FE;
 }
 
-.card {
-    background-color: white;
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step {
+  background-color: pink;
 }
 
 .nav_list {
