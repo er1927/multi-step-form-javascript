@@ -1,9 +1,19 @@
+/* * {
+  outline: 2px dotted red;
+} */
+
 body {
     background-color: #EDF4FE;
 }
 
 .card {
     background-color: white;
+}
+
+.nav_list {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none; 
 }
 
 /* 
