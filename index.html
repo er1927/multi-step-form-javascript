@@ -48,7 +48,7 @@
   <input placeholder="e.g. +1 234 567 890">
   </form>
 
-  <button onclick="nextStep()">Next Step</button>
+  <button class="button" onclick="nextStep()">Next Step</button>
 </div>
 
   <!-- Step 1 end -->
@@ -84,8 +84,8 @@
   
 </div>
 
-  <button onclick="prevStep()">Go Back</button>
-  <button onclick="nextStep()">Next Step</button>
+  <button class="button" onclick="prevStep()">Go Back</button>
+  <button class="button" onclick="nextStep()">Next Step</button>
 </div>
 
   <!-- Step 2 end -->
@@ -114,8 +114,8 @@
       <div>+$2/mo</div>
     </div>
 
-  <button onclick="prevStep()">Go Back</button>
-  <button onclick="nextStep()">Next Step</button>
+  <button class="button" onclick="prevStep()">Go Back</button>
+  <button class="button" onclick="nextStep()">Next Step</button>
 </div>
 
   <!-- Step 3 end -->
@@ -130,8 +130,8 @@
 
   Total (per month/year)
 
-  <button onclick="prevStep()">Go Back</button>
-  <button onclick="confirmOrder()">Confirm</button>
+  <button class="button" onclick="prevStep()">Go Back</button>
+  <button class="button" onclick="confirmOrder()">Confirm</button>
 
 </div>
   <!-- Step 4 end -->
@@ -151,37 +151,46 @@
   </footer>
 
   <script>
-  let currentStep = 1;
+let currentStep = 1;
 
-  function showStep(step) {
-    const steps = document.querySelectorAll('.step');
-    steps.forEach(s => s.style.display = 'none');
-    document.querySelector(`.step[data-step="${step}"]`).style.display = 'block';
-  }
+function showStep(step) {
+  const steps = document.querySelectorAll('.step');
+  steps.forEach(s => s.style.display = 'none');
+  document.querySelector(`.step[data-step="${step}"]`).style.display = 'block';
+}
 
-  function nextStep() {
-    // Perform validation if needed
-    // Update currentStep
-    currentStep++;
-    showStep(currentStep);
-  }
+function hideButtons() {
+  const buttons = document.querySelectorAll('.button');
+  buttons.forEach(button => button.style.display = 'none');
+}
 
-  function prevStep() {
-    // Update currentStep
-    currentStep--;
-    showStep(currentStep);
-  }
-
-  function confirmOrder() {
-    // Display order summary or submit the form
-    const confirmationTitle = document.getElementById('confirmation_title')
-    confirmationTitle.innerHTML = "Thank you";
-    const confirmationSubtitle = document.getElementById('confirmation_subtitle')
-    confirmationSubtitle.innerHTML = " Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support-at-loremgaming.com."
-  }
-
-  // Initial display
+function nextStep() {
+  // Perform validation if needed
+  // Update currentStep
+  currentStep++;
   showStep(currentStep);
+}
+
+function prevStep() {
+  // Update currentStep
+  currentStep--;
+  showStep(currentStep);
+}
+
+function confirmOrder() {
+  // Display order summary or submit the form
+  const confirmationTitle = document.getElementById('confirmation_title');
+  confirmationTitle.innerHTML = "Thank you";
+  const confirmationSubtitle = document.getElementById('confirmation_subtitle');
+  confirmationSubtitle.innerHTML = "Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support-at-loremgaming.com.";
+
+  // Hide buttons and last step
+  hideButtons();
+  document.querySelector('.step[data-step="last"]').style.display = 'none';
+}
+
+// Initial display
+showStep(currentStep);
 
 
   </script>
