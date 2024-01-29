@@ -184,14 +184,16 @@ function confirmOrder() {
   const confirmationSubtitle = document.getElementById('confirmation_subtitle');
   confirmationSubtitle.innerHTML = "Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support-at-loremgaming.com.";
 
-  // Hide buttons and last step
+  // Hide buttons and step 4
   hideButtons();
-  document.querySelector('.step[data-step="last"]').style.display = 'none';
+  const step4 = document.querySelector('.step[data-step="4"]');
+  if (step4) {
+    step4.style.display = 'none';
+  }
 }
 
 // Initial display
 showStep(currentStep);
-
 
   </script>
 </body>
