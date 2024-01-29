@@ -1,13 +1,13 @@
-* {
+/* * {
   outline: 2px dotted red;
-}
+} */
 
 body {
-    background-color: #EDF4FE;
-}
-
-body {
-  background:url("./assets/images/bg-sidebar-mobile.svg")
+  background-color: #EDF4FE;
+  background-image: url("./assets/images/bg-sidebar-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
 }
 
 .form-container {
@@ -17,7 +17,8 @@ body {
 }
 
 .step {
-  background-color: pink;
+  background-color: white;
+  width: 90%;;
 }
 
 .nav_list {
