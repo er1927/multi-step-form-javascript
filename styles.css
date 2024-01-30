@@ -1,6 +1,6 @@
-/* * {
+* {
   outline: 2px dotted red;
-} */
+}
 
 body {
   background-color: #EDF4FE;
@@ -14,6 +14,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .step {
@@ -26,6 +27,11 @@ body {
   justify-content: space-around;
   list-style-type: none; 
 }
+
+.button {
+  background-color: white;
+}
+
 
 /* 
 .switch {
