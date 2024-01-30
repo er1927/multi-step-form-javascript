@@ -2,13 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" type="text/css" href="styles.css">
   <title>Frontend Mentor | Multi-step form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -16,193 +13,143 @@
 </head>
 <body>
 
-  <!-- Sidebar start -->
-
 <nav class="nav">
-<ul class="nav_list">
-  <li class="nav_list_item1">1</li>
-  <li class="nav_list_item2">2</li>
-  <li class="nav_list_item3">3</li>
-  <li class="nav_list_item4">4 </li>
-</ul>
-
+  <ul class="nav_list">
+    <li class="nav_list_item1">1</li>
+    <li class="nav_list_item2">2</li>
+    <li class="nav_list_item3">3</li>
+    <li class="nav_list_item4">4</li>
+  </ul>
 </nav>
 
-  <!-- Sidebar end -->
-
-  <!-- Step 1 start -->
 <div class="form-container">
 
-<div class="step" data-step="1">
-  <h3>Personal info</h3>
-  <h4>Please provide your name, email address, and phone number.</h4>
+  <div class="step" data-step="1">
+    <h3>Personal info</h3>
+    <h4>Please provide your name, email address, and phone number.</h4>
+    <form>
+      <label>Name</label><br>
+      <input placeholder="e.g. Stephen King"><br>
 
-  <form>
-    <label>Name</label><br>
-  <input placeholder="e.g. Stephen King"><br>
+      <label>Email Address</label><br>
+      <input placeholder="e.g. stephenking@lorem.com"><br>
 
-  <label>Email Address</label><br>
-  <input placeholder="e.g. stephenking@lorem.com"><br>
-
-  <label>Phone Number</label><br>
-  <input placeholder="e.g. +1 234 567 890">
-  </form>
-  <button class="button" onclick="nextStep()">Next Step</button>
-</div>
-
-  
-
-
-  <!-- Step 1 end -->
-
-  <!-- Step 2 start -->
+      <label>Phone Number</label><br>
+      <input placeholder="e.g. +1 234 567 890">
+    </form>
+    <div class="buttons">
+      <button class="button" onclick="nextStep()">Next Step</button>
+    </div>
+  </div>
 
   <div class="step" data-step="2">
- <h3> Select your plan</h3>
-  <h4>You have the option of monthly or yearly billing.</h4>
-
-  <div>
-    <h4>Arcade</h4><br>
-    $9/mo
-  </div>
-
-  <div>
-    <h4>Advanced</h4><br>
-    $12/mo
-  </div>
-
-  <div>
-    <h4>Pro</h4><br>
-    $15/mo
-  </div>
-
-<div>
-  <div>Monthly</div>
-  <label class="switch">
-    <input type="checkbox">
-    <span class="slider round"></span>
-  </label>
-  <div>Yearly</div>
-  
-</div>
-<div class="button">
-  <button class="button" onclick="prevStep()">Go Back</button>
-  <button class="button" onclick="nextStep()">Next Step</button>
-</div>
-
-</div>
-
-  <!-- Step 2 end -->
-
-  <!-- Step 3 start -->
-
-  <div class="step" data-step="3">
- <h3> Pick add-ons</h3>
-  <h4>Add-ons help enhance your gaming experience.</h4>
-
-  <div>
-    <div>Online service<br> 
-      Access to multiplayer games</div>
-    <div>+$1/mo</div>
-  </div>
-
-  <div>
-    <div>Larger storage<br>
-      Extra 1TB of cloud save</div>
-    <div>+$2/mo</div>
-  </div>
-
+    <h3> Select your plan</h3>
+    <h4>You have the option of monthly or yearly billing.</h4>
     <div>
-      <div>Customizable Profile<br>
-        Custom theme on your profile</div>
-      <div>+$2/mo</div>
+      <h4>Arcade</h4><br>
+      $9/mo
     </div>
-    <div class="button">
+    <div>
+      <h4>Advanced</h4><br>
+      $12/mo
+    </div>
+    <div>
+      <h4>Pro</h4><br>
+      $15/mo
+    </div>
+    <div>
+      <div>Monthly</div>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+      <div>Yearly</div>
+    </div>
+    <div class="buttons">
       <button class="button" onclick="prevStep()">Go Back</button>
       <button class="button" onclick="nextStep()">Next Step</button>
     </div>
+  </div>
 
-</div>
-
-  <!-- Step 3 end -->
-
-  <!-- Step 4 start -->
+  <div class="step" data-step="3">
+    <h3> Pick add-ons</h3>
+    <h4>Add-ons help enhance your gaming experience.</h4>
+    <div>
+      <div>Online service<br> Access to multiplayer games</div>
+      <div>+$1/mo</div>
+    </div>
+    <div>
+      <div>Larger storage<br> Extra 1TB of cloud save</div>
+      <div>+$2/mo</div>
+    </div>
+    <div>
+      <div>Customizable Profile<br> Custom theme on your profile</div>
+      <div>+$2/mo</div>
+    </div>
+    <div class="buttons">
+      <button class="button" onclick="prevStep()">Go Back</button>
+      <button class="button" onclick="nextStep()">Next Step</button>
+    </div>
+  </div>
 
   <div class="step" data-step="4">
- <h3> Finishing up</h3>
-  <h4>Double-check everything looks OK before confirming.</h4>
+    <h3> Finishing up</h3>
+    <h4>Double-check everything looks OK before confirming.</h4>
+    <div class="buttons">
+      <button class="button" onclick="prevStep()">Go Back</button>
+      <button class="button" onclick="confirmOrder()">Confirm</button>
+    </div>
+  </div>
 
-  <!-- Dynamically add subscription and add-on selections here -->
+  <div class="card"> 
+    <div id="confirmation_title"></div>
+    <div id="confirmation_subtitle"></div>
+  </div>
 
-  Total (per month/year)
-
-<div class="button">
-    <button class="button" onclick="prevStep()">Go Back</button>
-  <button class="button" onclick="confirmOrder()">Confirm</button>
 </div>
 
-</div>
-  <!-- Step 4 end -->
+<footer class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by <a href="#">Your Name Here</a>.
+</footer>
 
-  <!-- Step 5 start -->
-<div class="card"> 
-  <div id="confirmation_title"></div>
-  <div id=confirmation_subtitle></div>
-</div>
+<script>
+  let currentStep = 1;
 
-  <!-- Step 5 end -->
-</div>
-
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
-
-  <script>
-let currentStep = 1;
-
-function showStep(step) {
-  const steps = document.querySelectorAll('.step');
-  steps.forEach(s => s.style.display = 'none');
-  document.querySelector(`.step[data-step="${step}"]`).style.display = 'block';
-}
-
-function hideButtons() {
-  const buttons = document.querySelectorAll('.button');
-  buttons.forEach(button => button.style.display = 'none');
-}
-
-function nextStep() {
-  // Perform validation if needed
-  // Update currentStep
-  currentStep++;
-  showStep(currentStep);
-}
-
-function prevStep() {
-  // Update currentStep
-  currentStep--;
-  showStep(currentStep);
-}
-
-function confirmOrder() {
-  // Display order summary or submit the form
-  const confirmationTitle = document.getElementById('confirmation_title');
-  confirmationTitle.innerHTML = "Thank you";
-  const confirmationSubtitle = document.getElementById('confirmation_subtitle');
-  confirmationSubtitle.innerHTML = "Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support-at-loremgaming.com.";
-
-  // Hide buttons and step 4
-  hideButtons();
-  const step4 = document.querySelector('.step[data-step="4"]');
-  if (step4) {
-    step4.style.display = 'none';
+  function showStep(step) {
+    const steps = document.querySelectorAll('.step');
+    steps.forEach(s => s.style.display = 'none');
+    document.querySelector(`.step[data-step="${step}"]`).style.display = 'block';
   }
-}
 
-// Initial display
-showStep(currentStep);
+  function hideButtons() {
+    const buttons = document.querySelectorAll('.button');
+    buttons.forEach(button => button.style.display = 'none');
+  }
 
-  </script>
+  function nextStep() {
+    currentStep++;
+    showStep(currentStep);
+  }
+
+  function prevStep() {
+    currentStep--;
+    showStep(currentStep);
+  }
+
+  function confirmOrder() {
+    const confirmationTitle = document.getElementById('confirmation_title');
+    confirmationTitle.innerHTML = "Thank you";
+    const confirmationSubtitle = document.getElementById('confirmation_subtitle');
+    confirmationSubtitle.innerHTML = "Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support-at-loremgaming.com.";
+    hideButtons();
+    const step4 = document.querySelector('.step[data-step="4"]');
+    if (step4) {
+      step4.style.display = 'none';
+    }
+  }
+
+  showStep(currentStep);
+</script>
 </body>
 </html>
