@@ -165,10 +165,21 @@
     if (card) {
       card.style.display = 'block';
     }
+    
+    // Hide the final step when confirmation is clicked
+    hideFinalStep();
+  }
+
+  function hideFinalStep() {
+    const finalStep = document.querySelector('.step[data-step="4"]');
+    if (finalStep) {
+      finalStep.style.display = 'none';
+    }
   }
   
   showStep(currentStep);
-  </script>
+</script>
+
   
 </body>
 </html>
