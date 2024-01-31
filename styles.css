@@ -8,6 +8,7 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
   background-size: contain;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .form-container {
@@ -105,6 +106,15 @@ body {
   }
 */
 
+  .buttons {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding: 20px;
+    
+  }
+
   #button-return {
     background-color: white;
     color: #A3A3AD;
@@ -121,9 +131,3 @@ body {
     color: white;
   }
 
-  .buttons {
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    margin: 50px;
-  }
