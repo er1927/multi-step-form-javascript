@@ -1,6 +1,6 @@
-* {
+/* * {
   outline: 2px dotted red;
-}
+} */
 
 body {
   background-color: #EDF4FE;
@@ -26,6 +26,18 @@ body {
   display: flex;
   justify-content: space-around;
   list-style-type: none; 
+}
+
+#nav_list_item-circle {
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  padding: 8px;
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .button {
