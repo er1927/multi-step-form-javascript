@@ -108,3 +108,10 @@ body {
   .slider.round:before {
     border-radius: 50%;
   }
+*/
+
+  .buttons {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+  }
