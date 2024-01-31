@@ -106,58 +106,69 @@
 </footer>
 
 <script>
-let currentStep = 1;
-
-function showStep(step) {
-  const steps = document.querySelectorAll('.step');
-  steps.forEach(s => s.style.display = 'none');
-  document.querySelector(`.step[data-step="${step}"]`).style.display = 'block';
-  updateButtonVisibility(step);
-}
-
-function hideButtons() {
-  const buttons = document.querySelectorAll('.buttons button');
-  buttons.forEach(button => button.style.display = 'none');
-}
-
-function showButtons() {
-  const buttons = document.querySelectorAll('.buttons button');
-  buttons.forEach(button => button.style.display = 'block');
-}
-
-function updateButtonVisibility(step) {
-  const backButton = document.querySelector('.buttons button[onclick="prevStep()"]');
-
-  if (step === 1) {
-    backButton.style.display = 'none';
-  } else {
-    backButton.style.display = 'block';
+  let currentStep = 1;
+  
+  function showStep(step) {
+    const steps = document.querySelectorAll('.step');
+    steps.forEach(s => s.style.display = 'none');
+    document.querySelector(`.step[data-step="${step}"]`).style.display = 'block';
+    updateButtonVisibility(step);
   }
-}
-
-function nextStep() {
-  currentStep++;
-  showStep(currentStep);
-}
-
-function prevStep() {
-  currentStep--;
-  showStep(currentStep);
-}
-
-function confirmOrder() {
-  const confirmationTitle = document.getElementById('confirmation_title');
-  confirmationTitle.innerHTML = "Thank you";
-  const confirmationSubtitle = document.getElementById('confirmation_subtitle');
-  confirmationSubtitle.innerHTML = "Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support-at-loremgaming.com.";
-  hideButtons();
-  const card = document.querySelector('.card');
-  if (card) {
-    card.style.display = 'block';
+  
+  function hideButtons() {
+    const buttons = document.querySelectorAll('.buttons button');
+    buttons.forEach(button => button.style.display = 'none');
   }
-}
-
-showStep(currentStep);
-</script>
+  
+  function showButtons() {
+    const buttons = document.querySelectorAll('.buttons button');
+    buttons.forEach(button => button.style.display = 'block');
+  }
+  
+  function updateButtonVisibility(step) {
+    const backButton = document.querySelector('.buttons button[onclick="prevStep()"]');
+    const nextButton = document.querySelector('.buttons button[onclick="nextStep()"]');
+    const confirmButton = document.querySelector('.buttons button[onclick="confirmOrder()"]');
+  
+    if (step === 1) {
+      backButton.style.display = 'none';
+      nextButton.style.display = 'block';
+      confirmButton.style.display = 'none';
+    } else if (step < 4) {
+      backButton.style.display = 'block';
+      nextButton.style.display = 'block';
+      confirmButton.style.display = 'none';
+    } else {
+      backButton.style.display = 'block';
+      nextButton.style.display = 'none';
+      confirmButton.style.display = 'block';
+    }
+  }
+  
+  function nextStep() {
+    currentStep++;
+    showStep(currentStep);
+  }
+  
+  function prevStep() {
+    currentStep--;
+    showStep(currentStep);
+  }
+  
+  function confirmOrder() {
+    const confirmationTitle = document.getElementById('confirmation_title');
+    confirmationTitle.innerHTML = "Thank you";
+    const confirmationSubtitle = document.getElementById('confirmation_subtitle');
+    confirmationSubtitle.innerHTML = "Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support-at-loremgaming.com.";
+    hideButtons();
+    const card = document.querySelector('.card');
+    if (card) {
+      card.style.display = 'block';
+    }
+  }
+  
+  showStep(currentStep);
+  </script>
+  
 </body>
 </html>
