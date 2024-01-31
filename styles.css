@@ -41,11 +41,6 @@ body {
   font-weight: bold;
 }
 
-.button {
-  background-color: white;
-}
-
-
 /* 
 .switch {
     position: relative;
@@ -110,8 +105,25 @@ body {
   }
 */
 
+  #button-return {
+    background-color: white;
+    color: #A3A3AD;
+    border: none;
+  }
+
+  #button-continue {
+    background-color: #032958;
+    color: white;
+  }
+
+  #button-confirm {
+    background-color: #453EFF;
+    color: white;
+  }
+
   .buttons {
     background-color: white;
     display: flex;
     justify-content: space-between;
+    margin: 50px;
   }
