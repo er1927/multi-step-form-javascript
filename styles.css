@@ -36,8 +36,8 @@ form {
 
 .nav_list {
   display: flex;
-  justify-content: space-around;
-  list-style-type: none; 
+  justify-content: center;
+  list-style-type: none;
 }
 
 #nav_list_item-circle {
