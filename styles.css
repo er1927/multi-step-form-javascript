@@ -13,6 +13,7 @@ body {
 
 h4 {
   color: #AEAFB4;
+  font-weight: 400;
 }
 
 .form-container {
@@ -127,7 +128,6 @@ input {
     justify-content: space-between;
     margin-top: 50px;
     padding: 20px;
-    
   }
 
   #button-return {
