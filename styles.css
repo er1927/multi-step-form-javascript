@@ -1,6 +1,6 @@
-/* * {
+* {
   outline: 2px dotted red;
-} */
+}
 
 body {
   background-color: #EDF4FE;
@@ -47,7 +47,7 @@ h4 {
 
 input {
   padding: 5px;
-  margin: 5px;
+  margin: 5px 5px 5px 0px;
   font-weight: bold;
 }
 
