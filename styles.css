@@ -1,6 +1,6 @@
-* {
+/* * {
   outline: 2px dotted red;
-}
+} */
 
 body {
   background-color: #EDF4FE;
@@ -14,11 +14,16 @@ body {
 h4 {
   color: #AEAFB4;
 }
+
 .form-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+form {
+  padding:20px;
 }
 
 .step {
@@ -47,8 +52,9 @@ h4 {
 
 input {
   padding: 5px;
-  margin: 5px 5px 5px 0px;
+  margin: 5px 5px 15px 0px;
   font-weight: bold;
+  width: 100%;
 }
 
 /* 
